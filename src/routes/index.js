@@ -3,7 +3,7 @@ import { Route, BrowserRouter } from 'react-router-dom'
 
 import Home from '../Containers/Home'
 import Main from '../Containers/Main'
-import Welcome from '../Containers/Welcome/index.jsx/index.jsx'
+import Welcome from '../Containers/Welcome/index.jsx'
 
 const Routes =  () => {
     return (
