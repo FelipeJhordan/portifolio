@@ -1,0 +1,34 @@
+.container-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--bg-main);
+    color: #fff;
+
+    padding: 0.5rem 2.5rem;
+
+    text-align: center;
+    height: 100vh;
+
+}   
+
+.container-welcome header {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-welcome section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75%;
+}
+
+section .text {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    letter-spacing: 0.1em;
+}
