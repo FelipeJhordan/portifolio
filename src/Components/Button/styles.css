@@ -1,0 +1,24 @@
+.container-button {
+    width: 10rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-button);
+    transition: 0.3s linear;
+}
+
+.container-button:hover {
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #fff;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--bg-main);
+}
+
