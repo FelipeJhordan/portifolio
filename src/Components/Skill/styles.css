@@ -1,0 +1,26 @@
+.wrapper-skill {
+    text-align: left;
+    padding-left: 0.9rem;
+}
+
+.wrapper-skill span {
+   display: inline-block;
+   padding-top: 2%;
+   vertical-align: top;
+   font-family: 'Roboto Mono', monospace;
+   font-weight: 800;
+   font-size: 1.3em;
+   margin-left: 0.3rem;
+}
+
+.type-basic img{
+    height: 2rem;
+}
+
+.type-medium {
+
+}
+
+.type-high {
+
+}
