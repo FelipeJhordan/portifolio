@@ -31,3 +31,20 @@
     line-height: 1.4em;
 }
 
+.wrapper-contact {
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-contact .text-contact {
+    margin-bottom: 2rem;
+}
+
+.wrapper-contact .wrapper-button {
+    display: center;
+    justify-content: center;
+}
+

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Photo from '../../Components/Photo'
 import photoSrc from '../../assets/img/photo.jpg'
@@ -7,9 +7,18 @@ import './styles.css'
 import ContentBox from '../../Components/ContentBox'
 import Skill from '../../Components/Skill'
 import MiniCarousel from '../../Components/MiniCarousel'
-
+import Button from '../../Components/Button'
+import Modal from '../../Components/Modal'
 const Main = () => {
+    const [openModal, setOpenModal] = useState(false)
 
+    const onContact = () => {
+        setOpenModal(true)
+    }   
+
+    const onCloseModal = () => {
+        setOpenModal(false)
+    }
 
     return (
         <>
@@ -42,7 +51,16 @@ const Main = () => {
                <ContentBox className="wrapper-proj" title="Projetos">
                    <MiniCarousel />
                </ContentBox>
-               <ContentBox className="wrapper-contact" title="Contato">
+               <ContentBox id="mod" className="wrapper-contact" title="Contato">
+                   <div className="text-contact">
+                       Me envie alguma mensagem ou sugestão de melhoria, críticas construtivas sempre serão bem vindas!
+                   </div>
+                   <div className="wrapper-button">
+                        <Button isMethod={true} wrapper={onContact}>Contatar</Button>
+                        { openModal &&
+                          <Modal  hasChanged={openModal} hasClosed={onCloseModal}/>
+                        }
+                   </div>
                </ContentBox>
            </div>
         </>

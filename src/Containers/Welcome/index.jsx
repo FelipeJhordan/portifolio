@@ -14,11 +14,11 @@ const Welcome = () => {
                 <section>
                     <div className="text">
                         <p>
-                            {new Date().getHours() >= 12 &&  Date().getHours() < 18 
-                               ? "Boa tarde "
+                            {new Date().getHours() >= 12 && new Date().getHours() < 18 
+                               ? "Boa tarde"
                                : new Date().getHours() >= 18 
-                                   ? "Boa noite "
-                                   : "Bom dia "  }, meu nome é felipe, sou desenvolvedor full-stack e espero que esse site te agrade!
+                                   ? "Boa noite"
+                                   : "Bom dia"  }, meu nome é felipe, sou desenvolvedor full-stack e espero que esse site te agrade!
                         </p>
                     </div>
                     <div className="wrapper-button">
