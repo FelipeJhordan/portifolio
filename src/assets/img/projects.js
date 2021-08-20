@@ -5,10 +5,22 @@ import Project3 from './project3.png'
 
 
 const Projects = {
-    Project0,
-    Project1,
-    Project2,
-    Project3
+    MoodManager: {
+        src: Project0,
+        name: "Mood Manager"
+    },
+    Ceres: {
+        src: Project1,
+        name: "Ceres"
+    },
+    familyChat: {
+        src: Project2,
+        name: "familyChat"
+    },
+    Ecoleta: {
+        src: Project3,
+        name: "Ecoleta"
+    },
 }
 
 export default Projects
