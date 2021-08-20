@@ -1,20 +1,28 @@
-.grid {
+.home.grid {
     display: grid;
     grid-template-columns: 1fr;
     
     background-color: var(--bg-main);
     color: #fff;
 
-    padding: 0.5rem 2.5rem;
-
     text-align: center;
     height: 100vh;
     grid-column-gap: 0;
-    grid-row-gap: 0;
-}   
+}
 
-header {
-    height: fit-content;
+.home-image {
+    display: none;
+}
+
+.contend-home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem 2.5rem;
+}
+
+.home.grid header {
+    height: 26%;
 }
 
 header h1 {
@@ -45,14 +53,51 @@ header h1 span:first-child {
     margin-bottom: 2.5rem;
 }
 
-footer {
+.home.grid section {
+    height: 66%;
+}
+
+.home.grid footer {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 1.9rem;
+    height: auto;
 }
 
 footer span {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
 }
+
+
+@media (max-height: 676px) {
+    .wrapper-subtitles {
+        margin-top: 1.4rem;
+        margin-bottom: 5rem;
+    }
+    footer {
+        padding-bottom: -2rem;
+    }
+  }
+
+@media (min-width: 800px) {
+    .home.grid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .wrapper-subtitles {
+        margin-top: 5rem;
+        margin-bottom: 6rem;
+    }
+    .home-image-container {
+        width: 100%;
+        height: 100%;
+    }
+    .home-image {
+        display: block;
+        object-fit: cover;
+        max-height: 100vh;
+        width: 100%;
+  }
+}
+

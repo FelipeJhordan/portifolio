@@ -1,13 +1,18 @@
 import React from 'react'
 import './styles.css'
+import homeImage from '../../assets/img/img-main.png'
 
 import Button from '../../Components/Button'
 const Home = () => {
 
 
     return (
-        <div className="grid">
-            <header>
+        <div className="home grid">
+            <div class="home-image-container">
+                <img class="home-image" src={homeImage} alt="home"/>
+            </div>
+            <div className="contend-home">
+                <header>
                 <h1>
                     <span>Dev</span>
                     <span>Full-stack</span>
@@ -27,6 +32,7 @@ const Home = () => {
                     {new Date().getFullYear()}
                 </span>
             </footer>
+            </div>
         </div>
     )
 }
