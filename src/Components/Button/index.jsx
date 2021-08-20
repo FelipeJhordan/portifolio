@@ -3,13 +3,13 @@ import './styles.css'
 
 import {Link} from 'react-router-dom'
 
-const Button = ({children, isMethod, wrapper}) => {
+const Button = ({children, isMethod, wrapper, className = 'btn', containerClassName = "container-button"}) => {
     return (
         <>
-            <div className="container-button"> 
+            <div className={containerClassName}> 
                 {
                     (isMethod) ? 
-                      <a href="#" onClick={wrapper}  className="btn"/>
+                      <a href="javascript:void(0)" onClick={wrapper}  className={className}>{children}</a>
                       : <Link className="btn" to={wrapper}> {children} </Link>
                 }
             </div>  

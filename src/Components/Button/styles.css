@@ -22,3 +22,27 @@
     color: var(--bg-main);
 }
 
+.container-btn-send {
+    background-color: #fff
+}
+
+
+.btn-send {
+    border-bottom: 1.6px solid var(--bg-main);
+    opacity: 0.9;
+}
+
+.btn-send:hover {
+    border-bottom: 1.6px solid var(--bg-main);
+    opacity: 1;
+}
+
+.btn-submited {
+    border-bottom: none;
+    font-size: 0.7em;
+    color: #222;
+}
+
+.btn-submited:hover {
+    border-bottom: none;
+}

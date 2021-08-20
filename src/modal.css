@@ -1,0 +1,83 @@
+.ReactModal__Content {
+    height: fit-content;
+}
+
+.modal {
+    padding: 0.5rem 0;
+    z-index: 2;
+}
+
+.header-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    padding: 0.3rem;
+}
+
+.title-modal {
+    font-size: 0.9em;
+    margin-right: 0.9rem;
+    vertical-align: middle;
+    align-self: flex-start;
+}
+
+.btn-send-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-close {
+    margin-right: 0.1rem;
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    color: var(--bg-main);
+    border-radius: 2rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    background-color: rgb(19, 26, 24);
+    color: var(--bg-button) ;
+}
+
+.modal .input-group {
+    margin: 1rem 0;
+    position: relative;
+
+}
+
+.modal .input-group span{
+    color: brown;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.3rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+}
+
+.modal .input-group input,.modal .input-group label, .modal .input-group textarea {
+    font-family: 'Roboto Mono', monospace;
+    margin: 2px 0 0 0;
+    font-size: 0.8em;
+}
+
+.modal .input-group input  {
+    border-radius: 0.5rem;
+    border: 1px solid var(--bg-main);
+}
+
+.modal .input-group textarea, .modal .input-group input {
+    width: 100%;
+}
+
+.modal .input-group textarea {
+    min-height: 4rem;
+    resize: none;
+    border-radius: 0.5rem;
+}
+
+
