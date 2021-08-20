@@ -32,3 +32,35 @@ section .text {
     text-align: left;
     letter-spacing: 0.1em;
 }
+
+@media screen and (min-width: 800px) {
+    .container-welcome {
+        padding: 7rem 20rem;
+    }
+
+    .container-welcome header {
+        height: 15%;
+    }
+
+    .container-welcome header h1{
+        font-size: 4.5rem;
+    }
+
+    .container-welcome section {
+        padding-right: 9rem;
+        padding-left: 6rem;
+        position: relative;
+    }
+
+    .container-welcome .text {
+        border: 1px solid var(--bg-button);
+        border-radius: 1rem;
+        padding: 0 3rem 5rem 3rem;
+    }
+
+    .wrapper-button {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 4rem;
+    }
+}
