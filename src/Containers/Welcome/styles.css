@@ -58,7 +58,7 @@ section .text {
         padding: 0 3rem 5rem 3rem;
     }
 
-    .wrapper-button {
+    .container-welcome .wrapper-button {
         position: absolute;
         bottom: 2.5rem;
         right: 4rem;
