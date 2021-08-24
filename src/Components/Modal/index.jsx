@@ -20,15 +20,19 @@ ReactModal.setAppElement("#root")
 const Modal = ( {hasChanged, hasClosed,} ) => {
     const [formValues, setFormValues] = useState({ name: "",email: "", mensagem: "" })
     const [fieldsError, setFieldsError] = useState({ fieldName: false, fieldMensagem: false, fieldEmail: false })
-    const [hasSubmited, setHasSubmited] = useState(false)
+    const [hasSubmited, setHasSubmited] = useState(true)
+    const [spinnerOn, setSpinnerOn] = useState(true)
     const sendMensage = () => {
         const formValid = verifyValues()
-        console.log(formValid)
         if(formValid){
+            setSpinnerOn(true)
             api.post("messages",{...formValues}).then(
                 ( response ) => {
                     setFormValues({ name: "",email: "", mensagem: "" })
                     setHasSubmited(true)
+                    setSpinnerOn(false)
+                },(err) => {
+                    setSpinnerOn(false)
                 }
             )
         }
@@ -75,12 +79,14 @@ const Modal = ( {hasChanged, hasClosed,} ) => {
             <ReactModal isOpen={hasChanged} onRequestClose={hasClosed}
            >
                <div className="modal">
+                        <div className="spinner" style={{display: (spinnerOn) ? "initial" : "none"}}></div>
                     <div className="header-modal">
-                    <h2 className="title-modal">Formulário de Contato</h2>
+                        <h2 className="title-modal">Formulário de Contato
+                    </h2>
                       <span className="btn-close" onClick={hasClosed}>
                            X
                     </span>
-                </div>
+                    </div>
                 <div>
                     <form>
                         <div className="input-group">
@@ -96,7 +102,7 @@ const Modal = ( {hasChanged, hasClosed,} ) => {
                             <textarea required onChange={handleChange} name="mensagem" value={formValues.mensagem}></textarea>
                         </div>
                         <div className="btn-send-wrapper">
-                            <Button wrapper={sendMensage} isMethod={true}  containerClassName="container-button container-btn-send"
+                            <Button wrapper={hasSubmited? () => {} : sendMensage} isMethod={true}  containerClassName="container-button container-btn-send"
                             className={hasSubmited? "btn btn-send btn-submited": "btn btn-send"}>
                                 { hasSubmited ? "Mensagem enviada": "Enviar"}
                             </Button>

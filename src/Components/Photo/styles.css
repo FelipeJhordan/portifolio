@@ -16,3 +16,14 @@
     padding-top: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (min-width: 800px) {
+    .container-photo .photo {
+        height: 8rem;
+        width: 8em;
+  }
+  .wrapper-name  {
+    padding-top: 0.4rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+}

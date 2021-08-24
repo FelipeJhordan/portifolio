@@ -7,19 +7,19 @@ import Project3 from './project3.png'
 const Projects = {
     MoodManager: {
         src: Project0,
-        name: "Mood Manager"
+        link: "https://github.com/tcd-pdw/mobile"
     },
     Ceres: {
         src: Project1,
-        name: "Ceres"
+        link: "https://github.com/FelipeJhordan/project-ceres"
     },
     familyChat: {
         src: Project2,
-        name: "familyChat"
+        link: "https://github.com/FelipeJhordan/project-chat"
     },
     Ecoleta: {
         src: Project3,
-        name: "Ecoleta"
+        link: "https://github.com/FelipeJhordan/nlw-01"
     },
 }
 

@@ -8,7 +8,7 @@
     padding: 0.5rem 2.5rem;
 
     text-align: center;
-    height: min-content;
+    height: max-content;
 }
 
 
@@ -24,7 +24,7 @@
     margin-bottom: 2rem;
 }
 
-.wrapper-about {
+.wrapper-about .about {
     text-align: left;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
@@ -32,19 +32,123 @@
 }
 
 .wrapper-contact {
-    height: 14rem;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .wrapper-contact .text-contact {
     margin-bottom: 2rem;
+    font-size: 0.9em;
 }
 
 .wrapper-contact .wrapper-button {
     display: center;
     justify-content: center;
+}
+
+.wrapper-contact .contact-details {
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+}
+
+.wrapper-contact .contact-details img {
+    max-width: 3rem;
+    max-height: auto;
+}
+
+.wrapper-contact .contact-details .contact-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapper-contact .contact-details .contact-icon img{
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+.wrapper-contact .contact-details div{
+    margin-bottom: 0.2rem;
+}
+
+.dev {
+    display: flex;
+    justify-content: center;
+    grid-area: dev;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 800px) {
+    .container-main.grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "about proj"
+                             "skills contact"
+                             "dev  dev";
+        grid-column-gap: 2rem;
+    }
+
+
+    .wrapper-about {
+        grid-area: about;
+        padding: 1.2rem 0 0 0;
+        margin-bottom: 0;
+        font-size: 0.9em;
+
+    }   
+    .wrapper-about header{
+        
+        padding-top: 0.4em;
+    } 
+
+    .wrapper-about section{
+        margin: 0;
+    } 
+
+    .wrapper-skills {
+        grid-area: skills;
+        margin-bottom: 0;
+       
+    }
+
+    .class {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .wrapper-skills br {
+        display: none;
+    }
+
+    .wrapper-skills .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wrapper-proj {
+        grid-area: proj;
+        margin-bottom: 0;
+    }
+    
+    .wrapper-contact {
+        grid-area: contact;
+        margin-bottom: 0;
+    }
+
+
+    .dev {
+        display: flex;
+        justify-content: center;
+    }
 }
 

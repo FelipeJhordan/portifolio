@@ -1,7 +1,7 @@
 
 
 .item {
-    padding: 0 0.2rem;
+    padding: 0 0.2rem 1.4rem 0.2rem;
     position: relative;
 }
 
@@ -12,10 +12,20 @@
     object-fit: contain;
 }
 
-.wrapper-carousel .img-desc {
+.wrapper-carousel a {
     position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    font-weight: bold;
-    color: rgb(58, 242, 255);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    color: white;
+    bottom: 0;
+    left: 40%;
+    vertical-align: text-bottom;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    border-bottom-style: groove;
+}
+
+
+.wrapper-carousel a:hover {
+    opacity: 0.8;
 }

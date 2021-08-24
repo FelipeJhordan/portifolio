@@ -14,10 +14,8 @@ const MiniCarousel = () => {
                         (project) => {
                             return(
                                 <div className="item" key={project+""}>
-                                    <span className="img-desc">
-                                            {project.name}
-                                    </span>
-                                    <img className="img-carousel" src={project.src}  alt=""/>
+                                        <img className="img-carousel" src={project.src}  alt=""/>
+                                        <a href={project.link}>Dar uma olhada </a>
                                 </div>
                             )
                         }

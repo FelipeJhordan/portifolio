@@ -80,4 +80,50 @@
     border-radius: 0.5rem;
 }
 
+.spinner {
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    border: 8px solid rgba(0, 0, 0, .1);
+    border-left-color: var(--bg-main);
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 0.8rem;
+    left: 4%;
+}
 
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .header-modal {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .title-modal {
+        font-size: 1em;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .btn-close {
+        justify-self: flex-end;
+    }
+    .ReactModal__Overlay {
+        position: relative;
+    }
+    .ReactModal__Content {
+        width: 50vw;
+        position: absolute;
+        top: 42;
+        margin: auto auto;
+    }   
+    .spinner {
+        top: 0.5rem;
+        left: 4%;
+        height: 2rem;
+        width: 2rem;
+    }
+}
