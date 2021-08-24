@@ -20,8 +20,8 @@ ReactModal.setAppElement("#root")
 const Modal = ( {hasChanged, hasClosed,} ) => {
     const [formValues, setFormValues] = useState({ name: "",email: "", mensagem: "" })
     const [fieldsError, setFieldsError] = useState({ fieldName: false, fieldMensagem: false, fieldEmail: false })
-    const [hasSubmited, setHasSubmited] = useState(true)
-    const [spinnerOn, setSpinnerOn] = useState(true)
+    const [hasSubmited, setHasSubmited] = useState(false)
+    const [spinnerOn, setSpinnerOn] = useState(false)
     const sendMensage = () => {
         const formValid = verifyValues()
         if(formValid){

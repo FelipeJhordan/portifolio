@@ -64,3 +64,11 @@ section .text {
         right: 4rem;
     }
 }
+
+@media screen and (min-width: 1000px ) and (max-height: 900px) {
+      .container-welcome .wrapper-button {
+        position: absolute;
+        bottom: -3rem;
+        right: 4rem;
+    }
+}
