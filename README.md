@@ -13,7 +13,7 @@
 ## Motivacão
 Criar um "banco" de projetos feitos ou executados por mim, com objetivo de demostrar minha evolução e atrair oportunidades e contatos.
 ## Site
-http://portifolio-felipe-jhordan.herokuapp.com/
+http://portifolio-felipe-jhordan.herokuapp.com/ ( Pode demorar 20 segundos - 30 segundos pra ser carregado devido ao plano free )
 ## Instalacão
 ### Para rodar o projeto é necessário:
  - Node v12+
