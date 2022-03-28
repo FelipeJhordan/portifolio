@@ -1,3 +1,18 @@
 span.btn-close {
     font-family: 'Roboto Mono', monospace;
 }
+
+.link-sheets {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--bg-main);
+    position: absolute;
+    bottom: 0.6rem;
+    right: 1rem;
+}
+
+.link-sheets:hover {
+    font-weight: bold;
+}

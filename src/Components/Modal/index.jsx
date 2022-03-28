@@ -4,16 +4,8 @@ import Button from '../Button'
 
 import api from '../../api/api'
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-    }
-}
+import './styles.css'
+
 
 ReactModal.setAppElement("#root")
 
@@ -26,7 +18,7 @@ const Modal = ( {hasChanged, hasClosed,} ) => {
         const formValid = verifyValues()
         if(formValid){
             setSpinnerOn(true)
-            api.post("messages",{...formValues}).then(
+            api.post("message",{...formValues, date: new Date().toISOString()}).then(
                 ( response ) => {
                     setFormValues({ name: "",email: "", mensagem: "" })
                     setHasSubmited(true)
@@ -108,6 +100,9 @@ const Modal = ( {hasChanged, hasClosed,} ) => {
                             </Button>
                         </div>
                     </form>
+                    <div>
+                        <a className='link-sheets' href="https://docs.google.com/spreadsheets/d/1TLDi1Ge0wWGyfJypEWrCXF9zZyTiybD4zYmapMGm-EE/edit?usp=sharing" target="_blank" rel="noreferrer" >Ver mensagens</a>
+                    </div>
                 </div>
                </div>
             </ReactModal>
